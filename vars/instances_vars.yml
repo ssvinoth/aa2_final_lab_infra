@@ -1,0 +1,45 @@
+---
+instances:
+  - name: app-01.example.com
+    keypair: 0ad4-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 0ad4-HostSG
+    internal_network: 0ad4-dev-network
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+      server_type: app
+
+  - name: app-02.example.com
+    keypair: 0ad4-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 0ad4-HostSG
+    internal_network: 0ad4-dev-network
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+      server_type: app
+
+  - name: database-01.example.com
+    keypair: 0ad4-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 0ad4-HostSG
+    internal_network: 0ad4-dev-network
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+      server_type: db
+
+  - name: frontend.example.com
+    keypair: 0ad4-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 0ad4-HostSG
+    internal_network: 0ad4-dev-network
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+      server_type: lb
